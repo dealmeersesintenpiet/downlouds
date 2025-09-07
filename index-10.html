@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>De Almeerse Sint en Piet</title>
+  <style>
+    body { 
+      font-family: 'Trebuchet MS', sans-serif; 
+      margin: 0; 
+      padding: 0; 
+      background: #fff8f0;
+    }
+    header { 
+      background: linear-gradient(90deg, crimson, darkred); 
+      color: gold; 
+      text-align: center; 
+      padding: 30px; 
+      border-bottom: 5px solid gold;
+    }
+    header h1 {
+      font-size: 2.5em;
+      margin: 0;
+      animation: fadeIn 2s ease-in-out;
+    }
+    header .subtitle {
+      font-style: italic;
+      font-family: "Brush Script MT", cursive, "Trebuchet MS", sans-serif;
+      font-size: 1.4em;
+      color: gold;
+      animation: fadeIn 3s ease-in-out;
+    }
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(20px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+    nav { 
+      background: gold; 
+      padding: 12px; 
+      text-align: center; 
+      position: sticky; 
+      top: 0; 
+      z-index: 1000;
+    }
+    nav a { margin: 0 15px; text-decoration: none; color: darkred; font-weight: bold; }
+    nav a:hover { color: black; }
+    section { 
+      padding: 40px 20px; 
+      max-width: 900px; 
+      margin: 30px auto; 
+      background: #fff; 
+      border-radius: 12px; 
+      box-shadow: 0 3px 8px rgba(0,0,0,0.2); 
+    }
+    h1, h2 { color: darkred; }
+    footer { 
+      background: darkred; 
+      color: white; 
+      text-align: center; 
+      padding: 20px; 
+      font-size: 14px; 
+      margin-top: 30px; 
+      border-top: 5px solid gold;
+    }
+    .faq-item { margin: 10px 0; border-bottom: 1px solid #ddd; padding: 10px 0; }
+    .faq-question { font-weight: bold; cursor: pointer; display: flex; justify-content: space-between; align-items: center; }
+    .faq-answer { display: none; margin-top: 8px; color: #444; }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>🎁 De Almeerse Sint en Piet 🎁</h1>
+    <p class="subtitle">Voor een magisch Sinterklaasfeest</p>
+  </header>
+  <nav>
+    <a href="#home">Home</a>
+    <a href="#agenda">Agenda</a>
+    <a href="#tarieven">Tarieven</a>
+    <a href="#fotos">Foto's</a>
+    <a href="#aanbevelingen">Aanbevelingen</a>
+    <a href="#faq">FAQ</a>
+    <a href="#boeking">Boeking</a>
+    <a href="#contact">Contact</a>
+  </nav>
+
+  <section id="faq">
+    <h2>FAQ – Veelgestelde vragen</h2>
+
+    <div class="faq-item"><div class="faq-question" onclick="toggleFAQ(this)">Hoe kan ik Sint en Roetveeg Piet boeken? <span>+</span></div><div class="faq-answer">Dit kan via het boekingsformulier, wij reageren altijd binnen 2 werkdagen.</div></div>
+
+    <div class="faq-item"><div class="faq-question" onclick="toggleFAQ(this)">Tot wanneer kan ik reserveren? <span>+</span></div><div class="faq-answer">Reserveren kan zolang er nog plaatsen beschikbaar zijn.</div></div>
+
+    <div class="faq-item"><div class="faq-question" onclick="toggleFAQ(this)">Wat kost een bezoek? <span>+</span></div><div class="faq-answer">20 minuten € 75,00 (vóór 1 november geboekt € 60,00)<br>30 minuten € 110,00 (vóór 1 november geboekt € 90,00)<br>45 minuten € 150,00 (vóór 1 november geboekt € 110,00)</div></div>
+
+    <div class="faq-item"><div class="faq-question" onclick="toggleFAQ(this)">Hoe lang duurt een huisbezoek? <span>+</span></div><div class="faq-answer">Wij adviseren om 20 minuten te boeken t/m 3 kinderen, van 4 t/m 7 kinderen 30 minuten, bij 8 t/m 10 kinderen 45 minuten. Er wordt gerekend vanaf het moment dat wij de drempel overgaan bij binnenkomst en weggaan. Een korter bezoek dan de geadviseerde tijd zal ten koste gaan van de persoonlijke aandacht voor de kinderen.</div></div>
+
+    <div class="faq-item"><div class="faq-question" onclick="toggleFAQ(this)">Wordt er strooigoed meegenomen? <span>+</span></div><div class="faq-answer">Ja er wordt ruim voldoende strooigoed meegenomen. Er wordt alleen gestrooid na toestemming, anders geven wij dit in overvloed in de handjes van de kinderen.</div></div>
+
+    <div class="faq-item"><div class="faq-question" onclick="toggleFAQ(this)">Houden jullie rekening met speciale wensen (bijv. verlegen kinderen, cadeaus)? <span>+</span></div><div class="faq-answer">Ja, zowel Sinterklaas als Roetveeg Piet zijn gewend om met kinderen om te gaan. Zo is onze Sinterklaas iets minder formeel. Als het voor een kind prettiger aanvoelt, dan gaat Sinterklaas gewoon op de grond zitten.</div></div>
+
+    <div class="faq-item"><div class="faq-question" onclick="toggleFAQ(this)">Zijn Sint en Piet betrouwbaar (VOG)? <span>+</span></div><div class="faq-answer">Beide zijn in het bezit van een Verklaring Omtrent Gedrag (VOG). Sinterklaas en Roetveeg Piet zijn respectievelijk in de kinderopvang en basisonderwijs binnen Almere werkzaam. Vanuit hun beroep is een VOG verplicht.</div></div>
+
+    <div class="faq-item"><div class="faq-question" onclick="toggleFAQ(this)">Wat als we willen annuleren of verplaatsen? <span>+</span></div><div class="faq-answer">Annuleren of verplaatsen kan tot 14 dagen van het huisbezoek.</div></div>
+
+    <div class="faq-item"><div class="faq-question" onclick="toggleFAQ(this)">Bezoeken jullie ook scholen, bso’s of bedrijven? <span>+</span></div><div class="faq-answer">In principe niet.</div></div>
+
+    <div class="faq-item"><div class="faq-question" onclick="toggleFAQ(this)">Delen jullie de cadeaus uit? <span>+</span></div><div class="faq-answer">Ca 5-10 minuten voor aankomst appen wij hoe laat wij aanwezig zullen zijn. Jullie zetten de zak met cadeaus dan buiten bij de voordeur neer. Wij nemen jullie zak(ken) met cadeaus dan mee naar binnen. Vind je dit spannend ivm eventuele diefstal, dan wordt vooraf doorgenomen dat dit in een slaapkamer staat. Wij geven dan aan dat wij het daar hebben neergezet, waardoor het voor de kinderen geloofwaardig blijft.</div></div>
+
+    <div class="faq-item"><div class="faq-question" onclick="toggleFAQ(this)">Komt Piet geschminkt en hoe ziet dat eruit? <span>+</span></div><div class="faq-answer">Om het Sinterklaasfeest voor iedereen leuk te houden, neemt Sinterklaas zijn Roetveeg Piet mee.</div></div>
+
+    <div class="faq-item"><div class="faq-question" onclick="toggleFAQ(this)">Kunnen jullie ook een speciaal gedicht of verhaaltje meenemen en voorlezen? <span>+</span></div><div class="faq-answer">Alleen als dit tijdig aangeleverd wordt door de aanvrager.</div></div>
+
+    <div class="faq-item"><div class="faq-question" onclick="toggleFAQ(this)">Wat gebeurt er als de Sint te laat is of zelfs niet meer kan komen door weer en verkeer? <span>+</span></div><div class="faq-answer">Dan laten wij dit direct weten. Wanneer er onverhoopt geen mogelijkheid is om te komen door het weer en verkeer, dan zijn er geen kosten.</div></div>
+
+    <div class="faq-item"><div class="faq-question" onclick="toggleFAQ(this)">Zijn huisdieren toegestaan? <span>+</span></div><div class="faq-answer">Nee huisdieren moeten de kamer uit zijn. Ervaring leert dat zelfs de meest rustige honden gaan blaffen en/of grommen. Dit gaat ten koste van de aandacht voor het kind.</div></div>
+
+    <div class="faq-item"><div class="faq-question" onclick="toggleFAQ(this)">Mag er gerookt worden in bijzijn van Sinterklaas en Roetveeg Piet? <span>+</span></div><div class="faq-answer">Nee, er mag niet gerookt worden in bijzijn van de Sint en Roetveeg Piet. Wij verzoeken om in de ruimte enkele uren voorafgaande niet te roken. Zo komen wij bij de volgende kinderen ook weer fris binnen.</div></div>
+
+    <div class="faq-item"><div class="faq-question" onclick="toggleFAQ(this)">Hoe moet er betaald worden? <span>+</span></div><div class="faq-answer">Doe het overeengekomen bedrag in een enveloppe. Bij binnenkomst of weggaan kan dit onopvallend aan Roetveeg Piet gegeven worden.</div></div>
+
+  </section>
+
+  <footer id="contact">
+    <p>Contact: info@sinterklaasenpiet.nl | Tel: 06-12345678</p>
+    <p>&copy; 2025 De Almeerse Sint en Piet</p>
+  </footer>
+
+  <script>
+    function toggleFAQ(element) {
+      const answer = element.nextElementSibling;
+      const symbol = element.querySelector("span");
+      if (answer.style.display === "block") {
+        answer.style.display = "none";
+        symbol.textContent = "+";
+      } else {
+        answer.style.display = "block";
+        symbol.textContent = "–";
+      }
+    }
+  </script>
+</body>
+</html>
