@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>De Almeerse Sint en Piet</title>
+  <style>
+    body { 
+      font-family: 'Trebuchet MS', sans-serif; 
+      margin: 0; 
+      padding: 0; 
+      background: #fff8f0;
+    }
+    header { 
+      background: linear-gradient(90deg, crimson, darkred); 
+      color: gold; 
+      text-align: center; 
+      padding: 30px; 
+      border-bottom: 5px solid gold;
+    }
+    header h1 { font-size: 2.5em; margin: 0; animation: fadeIn 2s ease-in-out; }
+    header .subtitle { font-style: italic; font-family: "Brush Script MT", cursive, "Trebuchet MS", sans-serif; font-size: 1.4em; color: gold; animation: fadeIn 3s ease-in-out; }
+    @keyframes fadeIn { from { opacity: 0; transform: translateY(20px); } to { opacity: 1; transform: translateY(0); } }
+    nav { background: gold; padding: 12px; text-align: center; position: sticky; top: 0; z-index: 1000; }
+    nav a { margin: 0 15px; text-decoration: none; color: darkred; font-weight: bold; }
+    nav a:hover { color: black; }
+    section { padding: 40px 20px; max-width: 900px; margin: 30px auto; background: #fff; border-radius: 12px; box-shadow: 0 3px 8px rgba(0,0,0,0.2); }
+    h1, h2 { color: darkred; }
+    ul { padding-left: 20px; }
+    footer { background: darkred; color: white; text-align: center; padding: 20px; font-size: 14px; margin-top: 30px; border-top: 5px solid gold; }
+    .foto-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(200px, 1fr)); gap: 15px; }
+    .foto-grid img { width: 100%; border-radius: 10px; border: 3px solid gold; cursor: pointer; transition: transform 0.3s; }
+    .foto-grid img:hover { transform: scale(1.05); }
+    .lightbox { display: none; position: fixed; z-index: 2000; padding-top: 60px; left: 0; top: 0; width: 100%; height: 100%; overflow: auto; background-color: rgba(0,0,0,0.9); }
+    .lightbox-content { margin: auto; display: block; max-width: 90%; max-height: 80vh; border: 4px solid gold; border-radius: 12px; }
+    .close { position: absolute; top: 30px; right: 45px; color: white; font-size: 40px; font-weight: bold; cursor: pointer; }
+    .close:hover { color: gold; }
+    blockquote { background: #fff4d1; border-left: 5px solid gold; margin: 20px 0; padding: 15px; font-style: italic; border-radius: 8px; }
+    .faq-item { margin: 10px 0; border-bottom: 1px solid #ddd; padding: 10px 0; }
+    .faq-question { font-weight: bold; cursor: pointer; display: flex; justify-content: space-between; align-items: center; }
+    .faq-answer { display: none; margin-top: 8px; color: #444; }
+    form { max-width: 600px; margin: 20px auto; text-align: left; }
+    form input, form textarea, form select { width: 100%; padding: 10px; margin: 8px 0; border-radius: 6px; border: 1px solid #ccc; font-family: inherit; }
+    form button { background: gold; color: darkred; font-weight: bold; padding: 10px 20px; border: none; border-radius: 25px; cursor: pointer; transition: 0.3s; }
+    form button:hover { background: white; color: crimson; }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>🎁 De Almeerse Sint en Piet 🎁</h1>
+    <p class="subtitle">Voor een magisch Sinterklaasfeest</p>
+  </header>
+
+  <nav>
+    <a href="#home">Home</a>
+    <a href="#agenda">Agenda</a>
+    <a href="#tarieven">Tarieven</a>
+    <a href="#fotos">Foto's</a>
+    <a href="#aanbevelingen">Aanbevelingen</a>
+    <a href="#faq">FAQ</a>
+    <a href="#boeking">Boeking</a>
+    <a href="#contact">Contact</a>
+  </nav>
+
+  <section id="home">
+    <h2>Home</h2>
+    <p><strong>Welkom bij De Almeerse Sint & Piet</strong></p>
+    <p>Wat is er leuker dan een écht bezoek van Sinterklaas en zijn Piet? Wij maken van elk huisbezoek een feest vol gezelligheid, plezier en verwondering. Onze huisbezoeken draaien volledig om de kinderen: gezelligheid, plezier en een vleugje magie staan centraal.</p>
+    <p>Kies voor een feest vol positieve energie, zorgvuldige voorbereiding en echte aandacht voor de kinderen. Maak van jullie Sinterklaasviering een beleving die nog lang in de herinnering blijft!</p>
+    <p>Het boeken van de Almeerse Sint & Piet is eenvoudig en betrouwbaar. Wij beschikken over een Verklaring Omtrent Gedrag. Wij houden het spannend door te zeggen dat wij altijd teruggaan naar Spanje. Tegen de (groot)ouders kunnen wij wel zeggen dat wij overige tijd van het jaar in het basisonderwijs en de kinderopvang werken. Zo weten wij precies wat er leeft bij kinderen en spelen we daar op een vrolijke en liefdevolle manier op in.</p>
+    <p>Boeken gaat heel eenvoudig en altijd betrouwbaar: wij beschikken over een Verklaring Omtrent Gedrag (VOG) en bereiden ieder bezoek zorgvuldig voor. Zo wordt jullie Sinterklaasfeest niet zomaar leuk, maar een herinnering om nooit te vergeten!</p>
+    <p>Tot snel bij jullie thuis,<br>met strooigoed, gezelligheid en een grote zak vol plezier!<br><em>De Almeerse Sint & Piet</em></p>
+  </section>
+
+  <section id="agenda">
+    <h2>Agenda</h2>
+    <p><strong>Beschikbare dagen:</strong></p>
+    <ul>
+      <li>Zaterdag 22 november</li>
+      <li>Zondag 23 november</li>
+      <li>Zaterdag 29 november</li>
+      <li>Zondag 30 november</li>
+      <li>Woensdag 3 december (vanaf 16.00 uur)</li>
+      <li>Vrijdag 5 december (vanaf 16.00 uur)</li>
+      <li>Zaterdag 6 december</li>
+    </ul>
+    <p>Staat de datum van jullie sinterklaasfeest er niet tussen? Stuur gerust een mailtje, dan kijken we samen wat mogelijk is.</p>
+  </section>
+
+  <section id="tarieven">
+    <h2>Tarieven</h2>
+    <ul>
+      <li>20 minuten € 75,00 (vóór 1 november geboekt € 60,00)</li>
+      <li>30 minuten € 110,00 (vóór 1 november geboekt € 90,00)</li>
+      <li>45 minuten € 150,00 (vóór 1 november geboekt € 110,00)</li>
+    </ul>
+  </section>
+
+  <section id="fotos">
+    <h2>Foto's</h2>
+    <div class="foto-grid">
+      <img src="https://pixabay.com/get/g8a5c4ef5b1c8f8d47cdc86a5a8d4c6e363c0a52cf5ceb0d0e245e14b7a27b8c57e71ee4e4bfec75d6a6adb0cb42e67f9e_640.jpg" alt="Sinterklaas op bezoek bij kinderen" onclick="openLightbox(this)">
+      <img src="https://pixabay.com/get/g12397f19d1ab09b7f45c0ed17588dfdf6fe2076290ce03c1138dbc591fe72c9cb7e6d300037ef04ae29a335a96919a9b_640.jpg" alt="Piet die cadeautjes uitdeelt" onclick="openLightbox(this)">
+      <img src="https://pixabay.com/get/gf7c518b7bd848c5b6f21e453f0f8f9b75b5932952d518a9aeb4e57bdd78f7d9bc14bb89e64565f2f85a686a22bb99db3_640.jpg" alt="Sinterklaas lacht met kinderen" onclick="openLightbox(this)">
+      <img src="https://pixabay.com/get/gd719de236afa75f1678b85a0a33139ddde0eca0eabb54dc8681589c03a09caed2402fe1d51c58eef0cc8b2a4f3f46a8e_640.jpg" alt="Kinderen zingen voor Sinterklaas" onclick="openLightbox(this)">
+    </div>
+  </section>
+
+  <div id="lightbox" class="lightbox">
+    <span class="close" onclick="closeLightbox()">&times;</span>
+    <img class="lightbox-content" id="lightbox-img" alt="">
+  </div>
+
+  <section id="aanbevelingen">
+    <h2>Aanbevelingen</h2>
+    <blockquote>“Wat een geweldige ervaring, de kinderen hebben genoten!” – Familie Jansen</blockquote>
+    <blockquote>“Professioneel, vriendelijk en heel leuk met de kinderen!” – Basisschool De Regenboog</blockquote>
+    <blockquote>“Een echte aanrader voor een geslaagd feest.” – Bedrijf X</blockquote>
+  </section>
+
+  <section id="faq">
+    <h2>FAQ – Veelgestelde vragen</h2>
+
+    <div class="faq-item"><div class="faq-question" onclick="toggleFAQ(this)">Hoe kan ik Sint en Roetveeg Piet boeken? <span>+</span></div><div class="faq-answer">Dit kan via het boekingsformulier, wij reageren altijd binnen 2 werkdagen.</div></div>
+
+    <div class="faq-item"><div class="faq-question" onclick="toggleFAQ(this)">Tot wanneer kan ik reserveren? <span>+</span></div><div class="faq-answer">Reserveren kan zolang er nog plaatsen beschikbaar zijn.</div></div>
+
+    <div class="faq-item"><div class="faq-question" onclick="toggleFAQ(this)">Wat kost een bezoek? <span>+</span></div><div class="faq-answer">20 minuten € 75,00 (vóór 1 november geboekt € 60,00)<br>30 minuten € 110,00 (vóór 1 november geboekt € 90,00)<br>45 minuten € 150,00 (vóór 1 november geboekt € 110,00)</div></div>
+
+    <div class="faq-item"><div class="faq-question" onclick="toggleFAQ(this)">Hoe lang duurt een huisbezoek? <span>+</span></div><div class="faq-answer">Wij adviseren om 20 minuten te boeken t/m 3 kinderen, van 4 t/m 7 kinderen 30 minuten, bij 8 t/m 10 kinderen 45 minuten. Er wordt gerekend vanaf het moment dat wij de drempel overgaan bij binnenkomst en weggaan. Een korter bezoek dan de geadviseerde tijd zal ten koste gaan van de persoonlijke aandacht voor de kinderen.</div></div>
+
+    <div class="faq-item"><div class="faq-question" onclick="toggleFAQ(this)">Wordt er strooigoed meegenomen? <span>+</span></div><div class="faq-answer">Ja er wordt ruim voldoende strooigoed meegenomen. Er wordt alleen gestrooid na toestemming, anders geven wij dit in overvloed in de handjes van de kinderen.</div></div>
+
+    <div class="faq-item"><div class="faq-question" onclick="toggleFAQ(this)">Houden jullie rekening met speciale wensen (bijv. verlegen kinderen, cadeaus)? <span>+</span></div><div class="faq-answer">Ja, zowel Sinterklaas als Roetveeg Piet zijn gewend om met kinderen om te gaan. Zo is onze Sinterklaas iets minder formeel. Als het voor een kind prettiger aanvoelt, dan gaat Sinterklaas gewoon op de grond zitten.</div></div>
+
+    <div class="faq-item"><div class="faq-question" onclick="toggleFAQ(this)">Zijn Sint en Piet betrouwbaar (VOG)? <span>+</span></div><div class="faq-answer">Beide zijn in het bezit van een Verklaring Omtrent Gedrag (VOG). Sinterklaas en Roetveeg Piet zijn respectievelijk in de kinderopvang en basisonderwijs binnen Almere werkzaam. Vanuit hun beroep is een VOG verplicht.</div></div>
+
+    <div class="faq-item"><div class="faq-question" onclick="toggleFAQ(this)">Wat als we willen annuleren of verplaatsen? <span>+</span></div><div class="faq-answer">Annuleren of verplaatsen kan tot 14 dagen van het huisbezoek.</div></div>
+
+    <div class="faq-item"><div class="faq-question" onclick="toggleFAQ(this)">Bezoeken jullie ook scholen, bso’s of bedrijven? <span>+</span></div><div class="faq-answer">In principe niet.</div></div>
+
+    <div class="faq-item"><div class="faq-question" onclick="toggleFAQ(this)">Delen jullie de cadeaus uit? <span>+</span></div><div class="faq-answer">Ca 5-10 minuten voor aankomst appen wij hoe laat wij aanwezig zullen zijn. Jullie zetten de zak met cadeaus dan buiten bij de voordeur neer. Wij nemen jullie zak(ken) met cadeaus dan mee naar binnen. Vind je dit spannend i.v.m. eventuele diefstal, dan wordt vooraf doorgenomen dat dit in een slaapkamer staat. Wij geven dan aan dat wij het daar hebben neergezet, waardoor het voor de kinderen geloofwaardig blijft.</div></div>
+
+    <div class="faq-item"><div class="faq-question" onclick="toggleFAQ(this)">Komt Piet geschminkt en hoe ziet dat eruit? <span>+</span></div><div class="faq-answer">Om het Sinterklaasfeest voor iedereen leuk te houden, neemt Sinterklaas zijn Roetveeg Piet mee.</div></div>
+
+    <div class="faq-item"><div class="faq-question" onclick="toggleFAQ(this)">Kunnen jullie ook een speciaal gedicht of verhaaltje meenemen en voorlezen? <span>+</span></div><div class="faq-answer">Alleen als dit tijdig aangeleverd wordt door de aanvrager.</div></div>
+
+    <div class="faq-item"><div class="faq-question" onclick="toggleFAQ(this)">Wat gebeurt er als de Sint te laat is of zelfs niet meer kan komen door weer en verkeer? <span>+</span></div><div class="faq-answer">Dan laten wij dit direct weten. Wanneer er onverhoopt geen mogelijkheid is om te komen door het weer en verkeer, dan zijn er geen kosten.</div></div>
+
+    <div class="faq-item"><div class="faq-question" onclick="toggleFAQ(this)">Zijn huisdieren toegestaan? <span>+</span></div><div class="faq-answer">Nee huisdieren moeten de kamer uit zijn. Ervaring leert dat zelfs de meest rustige honden gaan blaffen en/of grommen. Dit gaat ten koste van de aandacht voor het kind.</div></div>
+
+    <div class="faq-item"><div class="faq-question" onclick="toggleFAQ(this)">Mag er gerookt worden in bijzijn van Sinterklaas en Roetveeg Piet? <span>+</span></div><div class="faq-answer">Nee, er mag niet gerookt worden in bijzijn van de Sint en Roetveeg Piet. Wij verzoeken om in de ruimte enkele uren voorafgaande niet te roken. Zo komen wij bij de volgende kinderen ook weer fris binnen.</div></div>
+
+    <div class="faq-item"><div class="faq-question" onclick="toggleFAQ(this)">Hoe moet er betaald worden? <span>+</span></div><div class="faq-answer">Doe het overeengekomen bedrag in een enveloppe. Bij binnenkomst of weggaan kan dit onopvallend aan Roetveeg Piet gegeven worden.</div></div>
+
+  </section>
+
+  <section id="boeking">
+    <h2>Boekingsformulier</h2>
+    <p>Vul hieronder uw gegevens in om een boeking aan te vragen. U ontvangt een bevestiging in uw mailbox.</p>
+    <form action="https://formspree.io/f/xxxxxx" method="POST">
+      <label>Naam</label><input type="text" name="naam" required>
+      <label>Email</label><input type="email" name="email" required>
+      <label>Telefoonnummer</label><input type="tel" name="telefoon" required>
+      <label>Type bezoek</label>
+      <select name="type" required>
+        <option value="">-- Kies een optie --</option>
+        <option value="huisbezoek">Huisbezoek (30 min)</option>
+        <option value="school">Schoolbezoek (1 uur)</option>
+        <option value="bedrijf">Bedrijfsbezoek (1 uur)</option>
+        <option value="maatwerk">Maatwerk</option>
+      </select>
+      <label>Gewenste datum</label><input type="date" name="datum" required>
+      <label>Bericht / wensen</label><textarea name="bericht" rows="4" required></textarea>
+      <button type="submit">📅 Verstuur boekingsaanvraag</button>
+    </form>
+  </section>
+
+  <footer id="contact">
+    <p>Contact: info@sinterklaasenpiet.nl | Tel: 06-12345678</p>
+    <p>&copy; 2025 De Almeerse Sint en Piet</p>
+  </footer>
+
+  <script>
+    function toggleFAQ(element) {
+      const answer = element.nextElementSibling;
+      const symbol = element.querySelector("span");
+      if (answer.style.display === "block") {
+        answer.style.display = "none";
+        symbol.textContent = "+";
+      } else {
+        answer.style.display = "block";
+        symbol.textContent = "–";
+      }
+    }
+    function openLightbox(img) {
+      document.getElementById("lightbox").style.display = "block";
+      document.getElementById("lightbox-img").src = img.src;
+      document.getElementById("lightbox-img").alt = img.alt;
+    }
+    function closeLightbox() {
+      document.getElementById("lightbox").style.display = "none";
+    }
+  </script>
+</body>
+</html>
